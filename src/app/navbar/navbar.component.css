@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: #7cc9c9;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+.navbar a:hover {
+    background-color: #575757;
+}
+.nav-links {
+    display: flex;
+}
