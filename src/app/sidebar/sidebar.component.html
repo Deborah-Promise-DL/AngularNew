@@ -1,0 +1,62 @@
+<input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="toggle-label">☰</label>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <button class="close-btn" onclick="document.getElementById('sidebar-toggle').checked = false;">✖</button>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="https://attivotechsol.com/"> Home</a></li>
+            <li><a href="https://v17.angular.io/cli"> About Us</a></li>
+            <li><label for="toggle-table"> Users List</label></li>
+            <li><a href="https://angular.dev/tools/cli"> Settings</a></li>
+        </ul>
+
+        <!-- Carousel -->
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGPgMP5OP-JnA/feedshare-shrink_800/feedshare-shrink_800/0/1715426784311?e=2147483647&v=beta&t=4eb5PkjCWDOHFozNFMwkvek-bhInr3FRKFRTL97IVL8" alt="Image 1">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQF0dWyNb4NenA/feedshare-shrink_800/feedshare-shrink_800/0/1715426784146?e=2147483647&v=beta&t=qmQsUMkW4HFpfrvS9bMRbiXdyTS3uXjTBI7Md6JoiIk" alt="Image 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+
+        <!-- Checkbox to Toggle Table -->
+        <input type="checkbox" id="toggle-table">
+        
+        <!-- User Table -->
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip Code</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Deborah Promise</td>
+                    <td>D L</td>
+                    <td>Bangalore</td>
+                    <td>Karnataka</td>
+                    <td>123456</td>
+                    <td>9999999999</td>
+                </tr>
+                <tr>
+                    <td>Pinky</td>
+                    <td>D L</td>
+                    <td>Hyderabad</td>
+                    <td>Telangana</td>
+                    <td>123456</td>
+                    <td>9999999999</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
