@@ -1,0 +1,72 @@
+<!-- <p>ngfor works!</p> -->
+
+<div class="col-3">
+<ul>
+    <li> Tirupati </li>
+    <li> Delhi  </li>
+    <li> Mumbai </li>
+</ul>
+</div>
+
+<h3>NG FOR</h3>
+<div class = "col-3" *ngFor= "let city of cityList">
+    <ul>
+        <li> {{city}}</li>
+    </ul>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>twitter</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<h1>NG FOR employee table</h1>
+<div class="col-5">
+   <table class = "table table-bordered">
+    <thead>
+        <tr>
+            <th> Sr No</th>
+            <th> Name</th>
+            <th> City</th>
+            <th> Mobile No</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let emp of employeeArray;let srno=index" >
+            <td> {{srno+1}}</td>
+            <td> {{emp.name}}</td>
+            <td> {{emp.city}}</td>
+            <td> {{emp.mobile}}</td>
+        </tr>
+    </tbody>
+
+   </table>
+</div>

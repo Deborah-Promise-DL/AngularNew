@@ -1,0 +1,27 @@
+<p>databinding works!</p>
+
+ <div class="row">
+    <div class = "col=6">
+        ! Interpolation
+        {{firstName}} - {{lastName}} - {{age}} 
+</div>
+</div>
+
+<input type="text" [value]="firstName" name="" id="">
+<input type="text" [value]="lastName" placeholder="enter last name"> 
+
+<button class="btn btn-success" (click) = "onClickFunction()"> Click here</button> 
+<button class="btn btn-danger" (click) = "onClickFunction()"> Click here</button>
+
+<div>
+    <select (change)= "onchangeFunction()">
+    <option value = "Deborah"> Deborah</option>
+    <option value = "Promise"> Promise</option>
+    <option value = "Pinky"> Pinky</option>
+</select>
+</div>
+
+
+<h3> NG MODEL</h3>
+<input type="text" [(ngModel)] = "firstName" name="" id ="">
+<input type="text" [(ngModel)] = "lastName" placeholder="enter last name">

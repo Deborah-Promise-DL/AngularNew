@@ -1,0 +1,42 @@
+<!-- <p>companies works!</p> -->
+
+<a href="https://json-placeholder.mock.beeceptor.com/companies" > Mock API</a>
+
+
+<h3>Companies list of Mock API</h3>
+<div class="col-5">
+   <table class = "table table-bordered">
+     <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Zip</th>
+            <th>Country</th>
+            <th>Employee Count</th>
+            <th>Industry</th>
+            <th>Market Cap</th>
+            <th>Domain</th>
+            <th>Logo</th>
+            <th>CEO Name</th>
+        </tr>   
+     </thead>
+   
+        <tr *ngFor= "let companies of companyArray">
+            <td>{{companies.id}}</td>
+            <td>{{companies.name}}</td> 
+            <td>{{companies.address}}</td> 
+            <td>{{companies.zip}}</td>
+            <td>{{companies.country}}</td>
+            <td>{{companies.employeeCount}}</td>         
+            <td>{{companies.industry}}</td>
+            <td>{{companies.marketCap}}</td>
+            <td>{{companies.domain}}</td>
+            <td>{{companies.logo}}</td>
+            <td>{{companies.ceoName}}</td>
+             </tr>
+    
+
+   </table>
+</div>
+

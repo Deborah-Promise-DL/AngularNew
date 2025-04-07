@@ -1,0 +1,74 @@
+<!-- <p>react-validations works!</p> -->
+
+<form class="row g-3 needs-validation" novalidate [formGroup]= "userForm" (ngSubmit)= "onSave()">
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">First name <span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" id="validationCustom01" value="Mark" required formControlName = "fname">
+      <div class="text-danger">
+        @if(userForm.controls['fname'].errors?.['required'] && userForm.controls['fname'].touched){
+            <span> This field is required</span>
+        }
+        
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Last name <span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" id="validationCustom02" value="Otto" required formControlName = "lname">
+      <div class="text-danger">
+        @if(userForm.controls['lname'].errors?.['required'] && userForm.controls['lname'].touched){
+            <span> This field is required</span>
+        }      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Username <span class="text-danger"> * </span></label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">%</span>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required formControlName="uname">
+        <div class="text-danger">
+            @if(userForm.controls['uname'].errors?.['required'] && userForm.controls['uname'].touched){
+                <span> This field is required</span>
+            }
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">City <span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" id="validationCustom03" required formControlName="city">
+      <div class="text-danger">
+        @if(userForm.controls['city'].errors?.['required'] && userForm.controls['city'].touched){
+            <span> This field is required</span>
+        }  
+        </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom04" class="form-label">State <span class="text-danger"> * </span></label>
+      <select class="form-select" id="validationCustom04" required formControlName="state">
+        <option selected disabled value="">Choose...</option>
+        <option>Karnataka</option>
+        <option>Andhra Pradesh</option>
+      </select>
+      <div class="text-danger">
+        @if(userForm.controls['state'].errors?.['required'] && userForm.controls['state'].touched){
+            <span> This field is required</span>
+        }      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Zipcode <span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" id="validationCustom05" required formControlName="zipCode">
+      <div class="text-danger">
+        @if(userForm.controls['zipCode'].errors?.['required'] && userForm.controls['zipCode'].touched){
+            <span> This field is required</span>
+        }      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required formControlName="isAgree">
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>

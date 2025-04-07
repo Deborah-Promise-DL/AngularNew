@@ -1,0 +1,26 @@
+<!-- <p>ng-class works!</p> -->
+
+<div class="row">
+    <div class="col-5" [ngClass]= "divBackgroundColor">
+       DIV Component 1
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+    <button class="btn btn-success" (click)= "clickSuccess()"> Show</button>
+    <button class="btn btn-danger" (click)= "clickDanger()"> Hide</button>
+</div>
+</div>
+
+<div class="col-3 p-4" [ngStyle]="{'background-color': stylecolor}">
+    Deborah Promise D L
+</div>
+
+<div class="col-3 p-3" [ngClass]= "isChecked == true ? 'bg-success' : 'bg-danger'">
+    Div 2
+</div>
+
+<div class= "col-3">
+    <input type="checkbox" [(ngModel)]="isChecked"> {{isChecked}}
+</div>

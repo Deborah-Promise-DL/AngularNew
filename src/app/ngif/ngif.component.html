@@ -1,0 +1,23 @@
+<!-- <p>ngif works!</p> -->
+
+<div class = "row">
+    <div class = "col-3" *ngIf = "div1visible">
+        <div class = "bg-success p-3" > Div Class </div>
+    </div>
+</div>
+
+<div class = "row">
+    <div class = "col-3" *ngIf= "text1 == text2">
+        <div class = "bg-primary p-3" > Div 2 class</div>
+    </div>
+<div>
+    <input type  = "text" [(ngModel)] = "text1" > {{text1}}
+    <input type  = "text" [(ngModel)] = "text2" > {{text2}}
+</div>
+
+<div>
+    <button class="btn btn-success" (click) = "showDiv1()"> Show </button>
+    <button class="btn btn-danger" (click) = "hideDiv1()"> Hide </button>
+
+</div>
+

@@ -1,0 +1,61 @@
+<form #form="ngForm" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label class="form-label">First name <span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" #firstName = "ngModel" [(ngModel)] = "userObj.firstName" name="firstName" required>
+
+      <div class = "text-danger">
+        <span *ngIf = "firstName.errors?.['required'] && firstName.touched"> This field is required </span>
+      </div>
+     
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Last name</label>
+      <input type="text" class="form-control" [(ngModel)] = "userObj.lastName" name ="lastName" >
+     
+    </div>
+    <div class="col-md-4">
+      <label  class="form-label">Username <span class="text-danger"> * </span></label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">#</span>
+        <input type="text" class="form-control" #userName = "ngModel" [(ngModel)] = "userObj.userName" name="userName" required>
+        <div class = "text-danger">
+          <span *ngIf = "userName.errors?.['required'] && userName.touched"> This field is required</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">City <span class="text-danger"> * </span></label>
+      <input type="text" class="form-control" #city = "ngModel" [(ngModel)] = "userObj.city" name="city" required>
+      <div class = "text-danger">
+        <span *ngIf = "city.errors?.['required'] && city.touched"> This field is required</span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label  class="form-label">State</label>
+      <select class="form-select" [(ngModel)] = "userObj.state" name="state">
+        <option selected disabled value="">Choose...</option>
+        <option> Andhra Pradesh</option>
+        <option> Karnataka</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label  class="form-label">Zip</label>
+      <input type="text" class="form-control" [(ngModel)] = "userObj.zipCode" name="zipCode">
+      
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)] = "userObj.isAgreeTerms" name="isAgreeTerms">
+        <label class="form-check-label" >
+          Agree to terms and conditions
+        </label>
+        
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" [disabled]= "form.invalid" type="submit" (click)= "onSubmit()">Submit form</button>
+    </div>
+  </form>
